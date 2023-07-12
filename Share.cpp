@@ -6,7 +6,6 @@
 #define el std::cout << "\n"
 #define ft first
 #define sc second
-#define all(x) (x).begin(), (x).end
 #define pii pair<int, int>
 #define on true
 #define off false
