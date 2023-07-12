@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define pb push_back
-#define el cout << "\n"
+#define el std::cout << "\n"
 #define ft first
 #define sc second
 #define all(x) (x).begin(), (x).end
@@ -12,7 +12,7 @@
 #define off false
 #define skip continue;
 #define N 1000000
-using namespace std;
+// using namespace std;
 
 /*_____________________________ CODER _____________________________*/
 
@@ -48,8 +48,8 @@ int sum_digit(long long input)
 }
 bool check (long long input)
 {
-    vector <int> digit;
-    set <int> num;
+    std::vector <int> digit;
+    std::set <int> num;
     while (input > 0)
     {
         digit.pb(input % 10);
@@ -70,15 +70,15 @@ void prepare_before_input()
 }
 void getinput()
 {
-    cin >> n;
+    std::cin >> n;
 }
 void solve()
 {
-    for (long long i = 0; sum_digit(i) <= n; i ++)
+    for (long long i = 0; i <= 123456789; i ++)
     {
         if (check(i) == true && sum_digit(i) == n)
         {
-            cout << i;
+            std::cout << i;
             return;
         }
     }
@@ -106,8 +106,8 @@ void setting()
     if (multitest == on)
     {
         int number_of_test;
-        cin >> number_of_test;
-        cin.ignore();
+        std::cin >> number_of_test;
+        std::cin.ignore();
         while (number_of_test--)
         {
             getinput();
@@ -123,9 +123,9 @@ void setting()
 }
 void booster()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(0);
+    std::cout.tie(0);
 }
 void file_worker()
 {
