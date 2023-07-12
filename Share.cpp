@@ -56,7 +56,7 @@ bool check (long long input)
         num.insert(input % 10);
         input /= 10;
     }
-    if (digit.size() == num.size() && sum_digit(input) == n)
+    if (digit.size() == num.size())
         return true;
     else
         return false;
@@ -76,16 +76,17 @@ void solve()
 {
     for (long long i = 0; sum_digit(i) <= n; i ++)
     {
-        if (check(i) == true)
+        if (check(i) == true && sum_digit(i) == n)
         {
-            cout << i; return;
+            cout << i;
+            return;
         }
     }
 }
 int main()
 {
     boost = on;
-    file = off;
+    file = on;
     multitest = on;
     preinput = off;
     setting();
